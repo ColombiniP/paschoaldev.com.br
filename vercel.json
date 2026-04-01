@@ -1,0 +1,11 @@
+{
+	"headers":[
+		{
+			"source": "/wp-content/(.*)",
+			"headers": [
+				{ "key": "Access-Control-Allow-Origin", "value": "*" }
+			]
+		}
+	],
+	"cleanUrls": true
+}
