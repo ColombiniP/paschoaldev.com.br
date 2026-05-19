@@ -35,6 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.classList.remove('open');
       });
     });
+    document.addEventListener('click', (e) => {
+      if (
+        mobileMenu.classList.contains('open') &&
+        !mobileMenu.contains(e.target) &&
+        !hamburger.contains(e.target)
+      ) {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+      }
+    });
   }
 
 
