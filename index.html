@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- ============================================================
+       PASCHOAL COLOMBINI — index.html
+       Desenvolvido por: Paschoal Colombini
+       Domínio: paschoaldev.com.br
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Paschoal Colombini — Desenvolvimento de sistemas e sites modernos, responsivos e otimizados para SEO. Sites profissionais, e-commerce e landing pages.">
+  <meta property="og:title" content="Paschoal Colombini — Desenvolvimento de Sites e Sistemas">
+  <meta property="og:description" content="Soluções digitais sob medida para o seu negócio. Sites modernos, sistemas eficientes e experiências que geram resultados.">
+  <title>Paschoal Colombini — Desenvolvimento de Sites e Sistemas</title>
+  <link rel="icon" type="image/x-icon" href="assets/favico/favicon_io/favicon-16x16.png">
+
+  <!-- Google Fonts: Barlow Condensed (display) + Outfit (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS separado -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<!-- Posição fixa, fundo semi-transparente com blur.
+     A classe .scrolled é adicionada via JS ao rolar -->
+<nav>
+  <a href="#" class="nav-logo">
+    <!-- Logo extraído do material de divulgação -->
+    <img
+      src="assets/logo/logo-removebg-preview.png"
+      alt="Paschoal Colombini — Desenvolvimento de Sites e Sistemas"
+    >
+  </a>
+
+  <!-- Links de navegação — desktop -->
+  <ul class="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+
+  <!-- CTA desktop -->
+  <a href="https://wa.me/5521967254242?text=Olá!+Quero+um+orçamento" target="_blank" rel="noopener" class="nav-cta">
+    Solicitar Orçamento
+  </a>
+
+  <!-- Hambúrguer — visível apenas no mobile (via CSS) -->
+  <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Menu mobile — controlado por JS -->
+<div class="mobile-menu" role="navigation" aria-label="Menu mobile">
+  <a href="#servicos">Serviços</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#portfolio">Portfólio</a>
+  <a href="#contato">Contato</a>
+  <a href="https://wa.me/5521967254242" target="_blank" class="nav-cta" style="text-align:center">
+    Solicitar Orçamento
+  </a>
+</div>
+
+<!-- ─── HERO ─── -->
+<!-- Seção principal: headline + mockup de dispositivo.
+     Grid 2 colunas no desktop, 1 no mobile -->
+<section class="hero" id="inicio">
+
+  <!-- Coluna esquerda: texto + CTAs -->
+  <div class="hero-left">
+    <!-- Label de categoria — animado via JS (.reveal) -->
+    <p class="hero-eyebrow reveal">Desenvolvimento de Sites e Sistemas</p>
+
+    <h1 class="hero-title reveal reveal-delay-1">
+      TECNOLOGIA<br>
+      QUE <span class="highlight">CONECTA.</span><br>
+      SOLUÇÕES QUE<br>
+      <span class="highlight">TRANSFORMAM.</span>
+    </h1>
+
+    <div class="hero-line reveal reveal-delay-2"></div>
+
+    <p class="hero-sub reveal reveal-delay-2">
+      Desenvolvemos <strong>sites e sistemas personalizados</strong>
+      para impulsionar o seu negócio. Design moderno, performance
+      e SEO estratégico — tudo sob medida.
+    </p>
+
+    <!-- Botões de ação principal -->
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="https://wa.me/5521967254242?text=Olá!+Quero+um+orçamento" target="_blank" rel="noopener" class="btn-primary">
+        💬 Falar com Especialista
+      </a>
+      <a href="#portfolio" class="btn-ghost">
+        Ver Portfólio
+      </a>
+    </div>
+
+    <!-- Prova social — itens rápidos -->
+    <div class="hero-trust reveal reveal-delay-4">
+      <div class="trust-item">
+        <div class="trust-icon">✓</div>
+        <span>100% Responsivo</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔒</div>
+        <span>SSL Incluso</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🚀</div>
+        <span>SEO Estratégico</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coluna direita: imagem do mockup com badge flutuante -->
+  <div class="hero-right reveal reveal-delay-2">
+    <div class="hero-device">
+      <!-- Mockup do site mostrado nos posts do Instagram -->
+      <img
+        src="assets/images/modelo-restaurant.png"
+        alt="Mockup de site desenvolvido pela Paschoal Colombini"
+        loading="eager"
+      >
+
+      <!-- Crachá flutuante com preço -->
+      <div class="hero-badge">
+        <div class="hero-badge-icon">💻</div>
+        <div class="hero-badge-text">
+          <strong>Site Profissional</strong>
+          <span><a href="https://wa.me/5521967254242?text=Olá!+Quero+um+orçamento" target="_blank" rel="noopener">Faça seu orçamento</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ─── MARQUEE ─── -->
+<!-- Ticker horizontal animado com serviços disponíveis.
+     Duplicado para criar loop contínuo sem reset brusco -->
+<div class="marquee-bar" aria-hidden="true">
+  <div class="marquee-inner">
+    <span>Sites Profissionais</span> · <span>E-Commerce</span> · <span>Landing Pages</span> · <span>Sistemas Web</span> · <span>SEO</span> · <span>Sites Institucionais</span> · <span>Design Responsivo</span> · <span>Hospedagem</span> · <span>Sites Profissionais</span> · <span>E-Commerce</span> · <span>Landing Pages</span> · <span>Sistemas Web</span> · <span>SEO</span> · <span>Sites Institucionais</span> · <span>Design Responsivo</span> · <span>Hospedagem</span> ·
+  </div>
+</div>
+
+<!-- ─── SERVIÇOS ─── -->
+<!-- Grid 2x2 com as principais soluções oferecidas.
+     Cada card revela uma linha azul no topo ao hover -->
+<section class="servicos" id="servicos">
+
+  <div class="servicos-header">
+    <div>
+      <p class="section-label reveal">O que fazemos</p>
+      <h2 class="section-title reveal reveal-delay-1">
+        SOLUÇÕES PARA<br>
+        O SEU <em>NEGÓCIO</em>
+      </h2>
+    </div>
+    <p class="reveal reveal-delay-2">
+      Do planejamento ao lançamento, entregamos
+      projetos que geram resultados reais para
+      empresas de todos os tamanhos.
+    </p>
+  </div>
+
+  <div class="servicos-grid">
+
+    <!-- Card 1 — Sites Profissionais -->
+    <div class="servico-card reveal">
+      <div class="servico-num">01</div>
+      <div class="servico-icon">🖥️</div>
+      <h3 class="servico-name">Sites Profissionais</h3>
+      <p class="servico-desc">
+        Design moderno que transmite credibilidade e confiança.
+        Desenvolvemos seu site do zero com identidade visual
+        forte e foco em conversão.
+      </p>
+    </div>
+
+    <!-- Card 2 — Sites Institucionais -->
+    <div class="servico-card reveal reveal-delay-1">
+      <div class="servico-num">02</div>
+      <div class="servico-icon">🏢</div>
+      <h3 class="servico-name">Sites Institucionais</h3>
+      <p class="servico-desc">
+        Apresente sua empresa com profissionalismo e destaque
+        no mercado. Páginas completas com histórico, equipe,
+        serviços e área de contato.
+      </p>
+    </div>
+
+    <!-- Card 3 — Lojas Virtuais -->
+    <div class="servico-card reveal reveal-delay-2">
+      <div class="servico-num">03</div>
+      <div class="servico-icon">🛒</div>
+      <h3 class="servico-name">Lojas Virtuais</h3>
+      <p class="servico-desc">
+        E-commerces completos para vender mais e melhor.
+        Integração com meios de pagamento, gestão de estoque
+        e painel administrativo intuitivo.
+      </p>
+    </div>
+
+    <!-- Card 4 — Landing Pages -->
+    <div class="servico-card reveal reveal-delay-3">
+      <div class="servico-num">04</div>
+      <div class="servico-icon">🚀</div>
+      <h3 class="servico-name">Landing Pages</h3>
+      <p class="servico-desc">
+        Páginas estratégicas que convertem visitantes em clientes.
+        Desenvolvidas com copywriting orientado a resultados
+        e elementos de prova social.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── SOBRE / PACOTE ─── -->
+<!-- Seção dividida: imagem de mockup à esquerda +
+     conteúdo com lista de itens inclusos à direita -->
+<section class="sobre" id="sobre">
+
+  <!-- Visual: mockup de site nos devices -->
+  <div class="sobre-visual reveal">
+    <img src="assets/images/modelo-restaurant.png" alt="Mockup de site desenvolvido pela Paschoal Colombini" loading="lazy">
+    <!-- Crachá de preço flutuante -->
+    <div class="sobre-price-badge">
+      <div class="price-label">Por apenas</div>
+      <div class="price-value"><sup>R$</sup> 699<small>,90</small></div>
+    </div>
+  </div>
+
+  <!-- Conteúdo: benefícios do pacote -->
+  <div class="sobre-content">
+    <p class="section-label reveal">Site Profissional Completo</p>
+    <h2 class="section-title reveal reveal-delay-1">
+      TUDO QUE SEU<br>
+      NEGÓCIO <em>PRECISA</em>
+    </h2>
+    <p class="sobre-text reveal reveal-delay-2">
+      Um pacote completo pensado para quem quer presença
+      digital de qualidade sem complicação. Entregamos
+      seu site pronto para atrair clientes e crescer no Google.
+    </p>
+
+    <!-- Lista de itens inclusos -->
+    <ul class="sobre-itens reveal reveal-delay-2">
+      <li>Site com até 5 páginas</li>
+      <li>Domínio .com.br incluso</li>
+      <li>Hospedagem grátis 1 ano</li>
+      <li>Design responsivo</li>
+      <li>SEO on-page</li>
+      <li>SSL (HTTPS) gratuito</li>
+      <li>Integração WhatsApp</li>
+      <li>Google Analytics</li>
+    </ul>
+
+    <div class="reveal reveal-delay-3">
+      <a href="https://wa.me/5521967254242?text=Olá!+Tenho+interesse+no+pacote+de+site+por+R%24+699%2C90" target="_blank" rel="noopener" class="btn-primary">
+        💬 Quero esse pacote
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DIFERENCIAIS ─── -->
+<!-- 4 colunas de itens de confiança — aparece entre Sobre e Portfólio -->
+<div class="diferenciais" id="diferenciais">
+
+  <div class="diferencial-item reveal">
+    <div class="diferencial-icon">📱</div>
+    <h3 class="diferencial-title">100% Responsivo</h3>
+    <p class="diferencial-desc">Acesso perfeito em todos os dispositivos: desktop, tablet e mobile.</p>
+  </div>
+
+  <div class="diferencial-item reveal reveal-delay-1">
+    <div class="diferencial-icon">🔍</div>
+    <h3 class="diferencial-title">SEO Estratégico</h3>
+    <p class="diferencial-desc">Seu site otimizado para o Google e preparado para ranquear melhor.</p>
+  </div>
+
+  <div class="diferencial-item reveal reveal-delay-2">
+    <div class="diferencial-icon">⚡</div>
+    <h3 class="diferencial-title">Alta Performance</h3>
+    <p class="diferencial-desc">Sites rápidos que carregam em segundos e geram melhores resultados.</p>
+  </div>
+
+  <div class="diferencial-item reveal reveal-delay-3">
+    <div class="diferencial-icon">🛡️</div>
+    <h3 class="diferencial-title">Segurança</h3>
+    <p class="diferencial-desc">Proteção e estabilidade para seu site com certificado SSL incluso.</p>
+  </div>
+
+</div>
+
+<!-- ─── PORTFÓLIO ─── -->
+<!-- Grade de projetos realizados com imagens dos mockups -->
+<section class="portfolio" id="portfolio">
+
+  <div class="portfolio-header">
+    <div>
+      <p class="section-label reveal">Trabalhos recentes</p>
+      <h2 class="section-title reveal reveal-delay-1">
+        NOSSO <em>PORTFÓLIO</em>
+      </h2>
+    </div>
+    <a href="https://paschoaldev.com.br" target="_blank" rel="noopener" class="portfolio-link reveal">
+      Ver todos os projetos →
+    </a>
+  </div>
+
+  <!-- Grid 3 colunas — mockups dos projetos -->
+  <div class="portfolio-grid">
+
+    <div class="portfolio-card reveal">
+      <img
+        class="portfolio-img"
+        src="assets/images/mobile-first-restaurant.png"
+        alt="Projeto 1 — Site Profissional"
+        loading="lazy"
+      >
+      <div class="portfolio-card-body">
+        <span class="portfolio-tag">Site Profissional</span>
+        <h3 class="portfolio-card-title">Site Corporativo</h3>
+        <p class="portfolio-card-desc">Design moderno com foco em conversão e identidade visual forte.</p>
+      </div>
+    </div>
+
+    <!-- <div class="portfolio-card reveal reveal-delay-1">
+      <img
+        class="portfolio-img"
+        src=""
+        alt="Projeto 3 — E-commerce"
+        loading="lazy"
+      >
+      <div class="portfolio-card-body">
+        <span class="portfolio-tag">E-Commerce</span>
+        <h3 class="portfolio-card-title">Loja Virtual</h3>
+        <p class="portfolio-card-desc">E-commerce completo com pagamentos e gestão de produtos.</p>
+      </div>
+    </div> -->
+
+    <div class="portfolio-card reveal">
+      <img
+        class="portfolio-img"
+        src="assets/images/modelo-barber.png"
+        alt="Projeto 4 — Site Institucional"
+        loading="lazy"
+      >
+      <div class="portfolio-card-body">
+        <span class="portfolio-tag">Institucional</span>
+        <h3 class="portfolio-card-title">Site Institucional</h3>
+        <p class="portfolio-card-desc">Apresentação profissional da empresa com todas as seções essenciais.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-card reveal reveal-delay-1">
+      <img
+        class="portfolio-img"
+        src="assets/images/mobile-first-barber-removebg-preview.png"
+        alt="Projeto 5 — Site Mobile"
+        loading="lazy"
+      >
+      <div class="portfolio-card-body">
+        <span class="portfolio-tag">Responsivo</span>
+        <h3 class="portfolio-card-title">Design Mobile-First</h3>
+        <p class="portfolio-card-desc">Experiência perfeita em qualquer tela, do mobile ao desktop.</p>
+      </div>
+    </div>
+
+    <!-- <div class="portfolio-card reveal reveal-delay-2">
+      <img
+        class="portfolio-img"
+        src=""
+        alt="Projeto 6 — Pacote Completo"
+        loading="lazy"
+      >
+      <div class="portfolio-card-body">
+        <span class="portfolio-tag">Pacote Completo</span>
+        <h3 class="portfolio-card-title">Site + SEO + Hospedagem</h3>
+        <p class="portfolio-card-desc">Solução completa com domínio, hospedagem e otimização inclusa.</p>
+      </div>
+    </div> -->
+
+  </div>
+</section>
+
+<!-- ─── CTA BANNER ─── -->
+<!-- Banner azul de chamada para ação — destaque visual forte -->
+<section class="cta-banner">
+  <div class="cta-banner-left reveal">
+    <h2 class="cta-banner-title">
+      SEU NEGÓCIO<br>
+      MERECE UM SITE<br>
+      PROFISSIONAL.
+    </h2>
+    <p class="cta-banner-sub">
+      Solicite um orçamento sem compromisso e receba
+      uma proposta personalizada em até 24 horas.
+    </p>
+  </div>
+  <a
+    href="https://wa.me/5521967254242?text=Olá!+Quero+solicitar+um+orçamento+para+meu+site"
+    target="_blank"
+    rel="noopener"
+    class="btn-white reveal"
+  >
+    💬 Solicitar Orçamento Grátis
+  </a>
+</section>
+
+<!-- ─── CONTATO ─── -->
+<!-- Grid 2 colunas: informações de contato + formulário -->
+<section class="contato" id="contato">
+
+  <!-- Informações de contato -->
+  <div class="contato-content">
+    <p class="section-label reveal">Vamos conversar?</p>
+    <h2 class="section-title reveal reveal-delay-1">
+      ENTRE EM<br>
+      <em>CONTATO</em>
+    </h2>
+    <p class="contato-text reveal reveal-delay-2">
+      Quer um orçamento, tem alguma dúvida ou quer
+      saber mais sobre como podemos ajudar o seu negócio?
+      Estou aqui para atender você.
+    </p>
+
+    <div class="contato-items reveal reveal-delay-2">
+      <!-- WhatsApp -->
+      <div class="contato-item">
+        <div class="contato-icon">💬</div>
+        <div class="contato-item-text">
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/5521967254242" target="_blank" rel="noopener">
+            (21) 96725-4242
+          </a>
+        </div>
+      </div>
+
+      <!-- Instagram -->
+      <div class="contato-item">
+        <div class="contato-icon">📸</div>
+        <div class="contato-item-text">
+          <strong>Instagram</strong>
+          <a href="https://www.instagram.com/paschoaldev/" target="_blank" rel="noopener">
+            @paschoaldev
+          </a>
+        </div>
+      </div>
+
+      <!-- Site -->
+      <div class="contato-item">
+        <div class="contato-icon">🌐</div>
+        <div class="contato-item-text">
+          <strong>Site</strong>
+          <a href="https://paschoaldev.com.br" target="_blank" rel="noopener">
+            paschoaldev.com.br
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Redes sociais -->
+    <div class="redes reveal reveal-delay-3">
+      <a href="https://instagram.com/paschoaldev" target="_blank" rel="noopener" class="rede-btn" title="Instagram">📸</a>
+      <a href="https://wa.me/5521967254242" target="_blank" rel="noopener" class="rede-btn" title="WhatsApp">💬</a>
+      <a href="https://paschoaldev.com.br" target="_blank" rel="noopener" class="rede-btn" title="Site">🌐</a>
+    </div>
+  </div>
+
+  <!-- Formulário de contato -->
+  <!-- O JS escuta o 'submit', previne reload e mostra feedback -->
+  <form class="contato-form reveal reveal-delay-1" novalidate>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+      </div>
+      <div class="form-group">
+        <label for="empresa">Empresa</label>
+        <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="telefone">WhatsApp</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(21) 00000-0000">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="servico">Serviço de interesse</label>
+      <select id="servico" name="servico">
+        <option value="">Selecione um serviço</option>
+        <option>Site Profissional</option>
+        <option>Site Institucional</option>
+        <option>Loja Virtual (E-commerce)</option>
+        <option>Landing Page</option>
+        <option>Sistema Web</option>
+        <option>Outro</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre o seu projeto..."></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary" style="width:100%; justify-content:center">
+      Enviar Mensagem
+    </button>
+
+  </form>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+
+    <!-- Logo + descrição breve -->
+    <div>
+      <div class="footer-logo">
+        <img
+          src="assets/logo/logo-removebg-preview.png"
+          alt="Paschoal Colombini"
+        >
+      </div>
+      <p class="footer-desc">
+        Desenvolvimento de sites e sistemas modernos,
+        eficientes e com foco em resultados reais.
+      </p>
+    </div>
+
+    <!-- Links de serviços -->
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#servicos">Sites Profissionais</a></li>
+        <li><a href="#servicos">Sites Institucionais</a></li>
+        <li><a href="#servicos">Lojas Virtuais</a></li>
+        <li><a href="#servicos">Landing Pages</a></li>
+      </ul>
+    </div>
+
+    <!-- Links rápidos -->
+    <div class="footer-col">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="https://paschoaldev.com.br" target="_blank">paschoaldev.com.br</a></li>
+      </ul>
+    </div>
+
+    <!-- Contato rápido -->
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5521967254242" target="_blank">WhatsApp</a></li>
+        <li><a href="https://instagram.com/paschoaldev" target="_blank">@paschoaldev</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Rodapé inferior -->
+  <div class="footer-bottom">
+    <p class="footer-copy">
+      © 2025 Paschoal Colombini. Todos os direitos reservados.
+    </p>
+    <ul class="footer-links-bottom">
+      <li><a href="#">Privacidade</a></li>
+      <li><a href="#">Termos de Uso</a></li>
+      <li><a href="https://paschoaldev.com.br" target="_blank">paschoaldev.com.br</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- JavaScript separado — carregado ao final para não bloquear renderização -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
