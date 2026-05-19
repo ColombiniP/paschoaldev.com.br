@@ -211,6 +211,8 @@ nav.scrolled {
   gap: 5px;
   cursor: pointer;
   padding: 4px;
+  background: transparent;
+  border: none;
 }
 .nav-hamburger span {
   display: block;
@@ -1070,7 +1072,7 @@ footer {
   display: none;
   position: fixed;
   top: 72px; left: 0; right: 0;
-  background: transparent;
+  background: rgba(6,12,37,0.98);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   padding: 24px 32px;
